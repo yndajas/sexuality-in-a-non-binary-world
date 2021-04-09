@@ -1,0 +1,131 @@
+---
+---
+$colour-primary: #E91E63;
+$colour-secondary: #F8BBD0;
+$colour-light: #FCE4EC;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 60px;
+    background-color: $colour-light;
+    // color: $base-dark;
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Semibold", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+}
+
+div#image {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    img {
+        height: 100vh;
+    }
+
+    @media (max-width: 767.98px) {
+        display: none;
+    }
+}
+
+div#content {
+    position: absolute;
+    left: 48.2758621vh;
+    top: 0;
+    min-height: 100%;
+    width: calc(100% - 48.2758621vh);
+
+    @media (max-width: 767.98px) {
+        left: 0;
+        width: 100%;
+    }
+}
+
+header, footer .navbar-dark .navbar-text {
+    color: $colour-light;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    padding: 0;
+    background-color: $colour-primary;
+    border-bottom: 1px solid $colour-light;
+    
+    nav.navbar {    
+        padding: .5rem 0rem;
+
+        span.navbar-brand.h1 {
+            font-size: 2rem;
+            margin-bottom: 0;
+            white-space: normal;
+
+            @media (max-width: 767.98px) {
+                font-size: inherit;
+            }
+        }
+    }
+}
+
+main {
+    padding: 20px 0px 80px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: $colour-primary;
+    border-top: 1px solid $colour-secondary;
+
+    // .page-control {
+    //     cursor
+    // }
+}
+
+.container {
+    margin: 0;
+    padding: 0 5%;
+    min-width: 100%;
+}
+
+figure {
+        img {
+            display: block;
+            margin: 0 auto;
+            max-height: 50vh;
+        }
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    display: flex;
+    margin-left: 18px;
+    list-style-type: none;
+    
+    &::before {
+        margin-right: 10px;
+        content: ">";
+        color: $colour-primary;
+        font-weight: bold;
+    }
+}
+
+// overwrite Bootstrap styles that would otherwise overwrite styles specified above in certain cases
+
+@media (max-width: 767.98px) {
+    .navbar-expand-md > .container {
+        padding: 0 5%;
+    }
+}
