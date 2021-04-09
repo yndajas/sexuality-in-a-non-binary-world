@@ -21,6 +21,7 @@
 title: Sexuality in a non-binary world
 description: "Web presentation of \"Sexuality in a non-binary world: redefining and expanding the linguistic repertoire\""
 url: "https://yndajas.github.io/sexuality-in-a-non-binary-world" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/sexuality-in-a-non-binary-world"
 
 # Build settings
 permalink: pretty
