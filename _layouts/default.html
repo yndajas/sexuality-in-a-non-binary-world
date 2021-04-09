@@ -45,29 +45,22 @@
             <footer>
                 <nav class="navbar navbar-dark">
                     <div class="container">
-                        <ul id="slide-number" class="navbar-nav d-none d-sm-block">
-                            <span class="navbar-text">
-                                {% if page.slide_number %}
-                                    {{page.slide_number}}/N
-                                {% endif %}
-                            </span>
-                        </ul>
-                        <ul id="previous" class="navbar-nav d-block page-control">
-                            <span class="navbar-text">
-                                {% if page.previous %}
-                                    <a href="/{{ page.previous }}" title="previous">◀</a>
-                                {% endif %}
-                            </span>
-                        </ul>
                         <ul id="home" class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 <a href="/" title="home">🏠</a>
                             </span>
                         </ul>
-                        <ul id="previous" class="navbar-nav d-block page-control">
+                        <ul class="navbar-nav d-block page-control">
+                            <span class="navbar-text">
+                                {% if page.previous %}
+                                    <a id="previous" href="/{{ page.previous }}" title="previous">◀</a>
+                                {% endif %}
+                            </span>
+                        </ul>
+                        <ul class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 {% if page.next %}
-                                    <a href="/{{ page.next }}" title="next">▶</a>
+                                    <a id="next" href="/{{ page.next }}" title="next">▶</a>
                                 {% endif %}
                             </span>
                         </ul>
