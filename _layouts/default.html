@@ -55,7 +55,7 @@
                         <ul id="previous" class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 {% if page.previous %}
-                                    <a href="{{ page.previous }}" title="previous">◀</a>
+                                    <a href="{{ site.baseurl}}/{{ page.previous }}" title="previous">◀</a>
                                 {% endif %}
                             </span>
                         </ul>
@@ -67,7 +67,7 @@
                         <ul id="previous" class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 {% if page.next %}
-                                    <a href="{{ page.next }}" title="next">▶</a>
+                                    <a href="{{ site.baseurl}}/{{ page.next }}" title="next">▶</a>
                                 {% endif %}
                             </span>
                         </ul>
