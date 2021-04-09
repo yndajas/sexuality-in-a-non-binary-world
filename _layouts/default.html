@@ -16,12 +16,12 @@
         <!-- Google Trends -->
         <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script>
         <!-- styles and scripts -->
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css">
-        <script type="application/javascript" src="{{ site.baseurl }}/assets/index.js" charset="UTF-8"></script>
+        <link rel="stylesheet" href="/assets/styles.css">
+        <script type="application/javascript" src="/assets/index.js" charset="UTF-8"></script>
     </head>
     <body>
         <div id='image'>
-            <img src='{{ site.baseurl }}/assets/images/watercolour2_quality8.jpg' alt='watercolour image with irregular shaped blocks of pink, blue, orange and green in different shades/strengths of colour'>
+            <img src='/assets/images/watercolour2_quality8.jpg' alt='watercolour image with irregular shaped blocks of pink, blue, orange and green in different shades/strengths of colour'>
         </div>
         <div id='content'>
             <header>
@@ -55,7 +55,7 @@
                         <ul id="previous" class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 {% if page.previous %}
-                                    <a href="{{ site.baseurl}}/{{ page.previous }}" title="previous">◀</a>
+                                    <a href="/{{ page.previous }}" title="previous">◀</a>
                                 {% endif %}
                             </span>
                         </ul>
@@ -67,7 +67,7 @@
                         <ul id="previous" class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 {% if page.next %}
-                                    <a href="{{ site.baseurl}}/{{ page.next }}" title="next">▶</a>
+                                    <a href="/{{ page.next }}" title="next">▶</a>
                                 {% endif %}
                             </span>
                         </ul>
