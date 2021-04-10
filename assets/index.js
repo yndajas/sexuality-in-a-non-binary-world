@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', e => {
         const key = e.code;
 
-        console.log(e.code);
-
         if (key === 'ArrowLeft' && previousUrl !== null) {
             window.location.href = previousUrl;
         } else if (['ArrowRight', 'Space'].includes(key) && nextUrl !== null) {
@@ -24,3 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     })    
 })
 
+
+// main credit: https://stackoverflow.com/a/23593099
+function formattedDateNow() {
+    const dateNow = new Date;
+    let month = `${dateNow.getMonth() + 1}`,
+        day = `${dateNow.getDate()}`,
+        year = `${dateNow.getFullYear()}`;
+
+    if (month.length < 2) {
+        month = `0${month}`;        
+    }
+
+    if (day.length < 2) {
+        day = `0${day}`;
+    } 
+
+    return [year, month, day].join('-');
+}
