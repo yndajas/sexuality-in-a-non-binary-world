@@ -2,6 +2,7 @@
 ---
 $colour-primary: #E91E63;
 $colour-secondary: #F8BBD0;
+$colour-dark: #2D2D2D;
 $colour-light: #FCE4EC;
 
 html {
@@ -12,7 +13,7 @@ html {
 body {
     padding-bottom: 60px;
     background-color: $colour-light;
-    // color: $base-dark;
+    color: $colour-dark;
 
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Semibold", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -63,13 +64,13 @@ header {
         padding: .5rem 0rem;
 
         span.navbar-brand.h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 0;
             white-space: normal;
 
-            @media (max-width: 767.98px) {
-                font-size: inherit;
-            }
+            // @media (max-width: 767.98px) {
+            //     font-size: inherit;
+            // }
         }
     }
 }
@@ -85,10 +86,6 @@ footer {
     height: 60px;
     background-color: $colour-primary;
     border-top: 1px solid $colour-secondary;
-
-    // .page-control {
-    //     cursor
-    // }
 }
 
 .container {
