@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', e => {
         const key = e.code;
 
-        if (key === 'ArrowLeft' && previousUrl !== null) {
+        if (['ArrowLeft', 'Backspace'].includes(key) && previousUrl !== null) {
             window.location.href = previousUrl;
         } else if (['ArrowRight', 'Space'].includes(key) && nextUrl !== null) {
             window.location.href = nextUrl;
