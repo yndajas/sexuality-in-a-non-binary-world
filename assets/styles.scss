@@ -94,6 +94,23 @@ footer {
     min-width: 100%;
 }
 
+ul {
+    padding-inline-start: 0px;
+    
+    li {
+        display: flex;
+        margin-left: 18px;
+        list-style-type: none;
+        
+        &::before {
+            margin-right: 10px;
+            content: ">";
+            color: $colour-primary;
+            font-weight: bold;
+        }
+    }    
+}
+
 figure {
         img {
             display: block;
@@ -102,21 +119,9 @@ figure {
         }
 }
 
-ul {
-    padding-inline-start: 0px;
-}
-
-li {
-    display: flex;
-    margin-left: 18px;
-    list-style-type: none;
-    
-    &::before {
-        margin-right: 10px;
-        content: ">";
-        color: $colour-primary;
-        font-weight: bold;
-    }
+div#references {
+    text-indent: -30px;
+    padding-left: 30px;
 }
 
 // overwrite Bootstrap styles that would otherwise overwrite styles specified above in certain cases
