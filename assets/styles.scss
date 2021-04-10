@@ -122,6 +122,7 @@ figure {
 div#references {
     text-indent: -30px;
     padding-left: 30px;
+    overflow-wrap: break-word;
 }
 
 // overwrite Bootstrap styles that would otherwise overwrite styles specified above in certain cases
