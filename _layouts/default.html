@@ -57,22 +57,21 @@
                     <div class="container">
                         <ul id="home" class="navbar-nav d-block page-control">
                             <span class="navbar-text">
-                                <a href="/" title="home">🏠</a>
+                                <a href="/" title="Home (shortkey: h)">🏠</a>
                             </span>
                         </ul>
                         <ul class="navbar-nav d-block page-control">
                             <span class="navbar-text">
                                 {% if page.previous %}
-                                    <a id="previous" href="/{{ page.previous }}" title="previous">◀</a>
+                                    <a id="previous" href="/{{ page.previous }}" title="Previous (shortkeys: left, backspace, p)">◀</a>
+                                {% endif %}
+                                {% if page.next %}
+                                    &nbsp;<a id="next" href="/{{ page.next }}" title="Next (shortkeys: right, space, n)">▶</a>
                                 {% endif %}
                             </span>
                         </ul>
-                        <ul class="navbar-nav d-block page-control">
-                            <span class="navbar-text">
-                                {% if page.next %}
-                                    <a id="next" href="/{{ page.next }}" title="next">▶</a>
-                                {% endif %}
-                            </span>
+                        <ul class="navbar-nav d-block d-none d-sm-block">
+                            <span class="navbar-text"><span id="decrease-font" class="font-size-control" title="Decrease font (shortkey: d)">🗛⁻</span>&nbsp;&nbsp;<span id="increase-font" class="font-size-control" title="Increase font (shortkey: i)">🗚⁺</span></span>
                         </ul>
                         <ul id="copyright" class="navbar-nav d-none d-sm-block"><span class="navbar-text">© Ynda Jas {{ site.time | date: '%Y' }}</span></ul>
                     </div>
