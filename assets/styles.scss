@@ -135,6 +135,10 @@ div#references {
     overflow-wrap: break-word;
 }
 
+.small-caps {
+    font-size: 0.75rem;
+}
+
 // overwrite Bootstrap styles that would otherwise overwrite styles specified above in certain cases
 
 @media (max-width: 767.98px) {
