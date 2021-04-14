@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const {previousUrl, nextUrl} = getPreviousAndNextUrls();
     const main = document.getElementsByTagName('main')[0];
 
+    loadFontSizePreference(main);
     addFontSizeListener(main);
     addKeyListener(previousUrl, nextUrl, main);
 })
@@ -23,16 +24,23 @@ function getPreviousAndNextUrls() {
     return {previousUrl: previousUrl, nextUrl: nextUrl};
 }
 
+function loadFontSizePreference(main) {
+    const fontSize = parseInt(localStorage.getItem('fontSize'));
+    if (fontSize) {
+        setFontSize(main, fontSize);
+    }
+}
+
 function addFontSizeListener(main) {
     const decreaseFontButton = document.getElementById('decrease-font');
     const increaseFontButton = document.getElementById('increase-font');
 
     decreaseFontButton.addEventListener('click', () => {
-        decreaseFontSize(main);
+        setFontSize(main, 'minus');
     })
 
     increaseFontButton.addEventListener('click', () => {
-        increaseFontSize(main);
+        setFontSize(main, 'plus');
     })
 }
 
@@ -45,29 +53,31 @@ function addKeyListener(previousUrl, nextUrl, main) {
         } else if (['ArrowRight', 'Space', 'KeyN'].includes(key) && nextUrl !== null) {
             window.location.href = nextUrl;
         } else if (key === 'KeyD') {
-            decreaseFontSize(main);
+            setFontSize(main, 'minus');
         } else if (key === 'KeyI') {
-            increaseFontSize(main);
+            setFontSize(main, 'plus');
         } else if (key === 'KeyH') {
             window.location.href = `${window.location.protocol}//${window.location.host}`;
         }
     })
 }
 
-function decreaseFontSize(main) {
-    const currentFontSize = getCurrentFontSize(main);
-    if (currentFontSize > 4) {
-        main.style.fontSize = `${currentFontSize - 4}px`;
+function setFontSize(main, directionOrSize) {
+    const currentFontSize = parseInt(getComputedStyle(main)['font-size']);
+    let newFontSize = currentFontSize;
+    
+    if (Number.isInteger(directionOrSize)) {
+        newFontSize = directionOrSize;
+    } else if (directionOrSize === 'minus') {
+        if (currentFontSize > 4) {
+            newFontSize -=4;
+        }
+    } else {
+        newFontSize +=4;
     }
-}
 
-function increaseFontSize(main) {
-    const currentFontSize = getCurrentFontSize(main);
-    main.style.fontSize = `${currentFontSize + 4}px`;
-}
-
-function getCurrentFontSize(main) {
-    return parseInt(getComputedStyle(main)['font-size']);
+    main.style.fontSize = `${newFontSize}px`;
+    localStorage.setItem('fontSize', newFontSize);
 }
 
 // main credit: https://stackoverflow.com/a/23593099
