@@ -58,6 +58,8 @@ function addKeyListener(previousUrl, nextUrl, main) {
             setFontSize(main, 'plus');
         } else if (key === 'KeyH') {
             window.location.href = `${window.location.protocol}//${window.location.host}`;
+        } else if (key === 'KeyR') {
+            window.location.href = `${window.location.protocol}//${window.location.host}/references`;
         }
     })
 }
