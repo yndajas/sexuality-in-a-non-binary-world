@@ -60,6 +60,8 @@ function addKeyListener(previousUrl, nextUrl, main) {
             window.location.href = `${window.location.protocol}//${window.location.host}`;
         } else if (key === 'KeyR') {
             window.location.href = `${window.location.protocol}//${window.location.host}/references`;
+        } else if (key === 'KeyC') {
+            window.location.href = `${window.location.protocol}//${window.location.host}/contents`;
         }
     })
 }
