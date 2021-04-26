@@ -87,6 +87,14 @@ footer {
     }
 }
 
+header, footer .navbar-dark .navbar-text {
+    color: $colour-light;
+
+    a {
+        text-decoration: none;
+    }
+}
+
 .container {
     margin: 0;
     padding: 0 5%;
