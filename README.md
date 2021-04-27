@@ -6,7 +6,7 @@ A web-based, mUlTiMeDiA summary of the article <a href="https://www.budrich-jour
 
 Suggestions, questions, bug reports and pull requests are more than welcome. As a summary of a published article the core content is fairly fixed, but I'm happy to add additional notes and clarifications where helpful.
 
-You can get in contact by [opening an issue](https://github.com/yndajas/sexuality-in-a-non-binary-world/issues/new) or, if you'd rather not register on GitHub, you can email me at [yndajas@gmail.com](mailto:yndajas@gmail.com?subject=Sexuality in a non-binary world site).
+You can get in contact by [opening an issue](https://github.com/yndajas/sexuality-in-a-non-binary-world/issues/new) or, if you'd rather not register on GitHub, you can email me at <a href="mailto:yndajas@gmail.com?subject=Sexuality in a non-binary world site">yndajas@gmail.com</a>).
 
 To make changes to the site you can edit files directly on GitHub or <a href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo" title="Fork a repo" target="_blank">fork and clone the repository</a> to work locally.
 
